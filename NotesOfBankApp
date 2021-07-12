@@ -1,3 +1,12 @@
 NotesOfBankApp
 1) Yeni proje baslatmak icin terminale ac ve estop'a gel ve sonra terminale asagidaki komutu yaz.
    npx create-react-app bankapp
+
+2) Githup:
+echo "# bankApp" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/kemgur/bankApp.git
+git push -u origin main
