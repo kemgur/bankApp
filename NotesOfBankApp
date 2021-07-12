@@ -1,0 +1,3 @@
+NotesOfBankApp
+1) Yeni proje baslatmak icin terminale ac ve estop'a gel ve sonra terminale asagidaki komutu yaz.
+   npx create-react-app bankapp
