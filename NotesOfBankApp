@@ -10,3 +10,16 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/kemgur/bankApp.git
 git push -u origin main
+
+3) package.json a asagidaki kutuphaneler dependencies'e install edilir.
+     "@material-ui/core": "^4.12.1",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "bootstrap": "^5.0.2",
+    "react-bootstrap": "^1.6.1",
+    "axios": "^0.21.1"
+     "formik": "^2.2.9",
+    "formik-material-ui": "^3.0.1",
+    "yup": "^0.32.9"
+ Sari cizgi hatasi verirse;
+    npm install @material-ui/core yazarak terminalden sirayla install edilir. 
