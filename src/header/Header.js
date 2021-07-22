@@ -6,7 +6,21 @@ const Header = () => {
   return (
     <div>
     <Container fluid>
-      <Nav variant="pills" defaultActiveKey="/home">
+      <Container>
+      <TopNav />
+      </Container>  
+
+      
+      
+    </Container>
+    </div>
+  );
+};
+
+const TopNav =()=>{
+  return(
+    <div>
+    <Nav variant="tabs" defaultActiveKey="/home">
         <Nav.Item>
             <Nav.Link href="/home">Active</Nav.Link>
         </Nav.Item>
@@ -14,15 +28,10 @@ const Header = () => {
             <Nav.Link eventKey="link-1">Option 2</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link eventKey="disabled" disabled>
-      Disabled
-       </Nav.Link>
-      </Nav.Item>
-     </Nav>
-        
-       
+            <Nav.Link eventKey="disabled" disabled>Disabled</Nav.Link>
+        </Nav.Item>
+    </Nav>
 
-    </Container>
     </div>
   )
 }
