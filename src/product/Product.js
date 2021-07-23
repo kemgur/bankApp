@@ -1,9 +1,10 @@
 import React from 'react';
 import {Card} from "react-bootstrap";
-import {ListGroup,ListGroupItem} from "react-bootstrap";
+import {ListGroup,ListGroupItem, Container,Col, Row,} from "react-bootstrap";
 import Gold01 from "../images/card/Gold01.jpeg";
 import Platinum01 from "../images/card/Platinum01.jpeg";
 import Silver01 from "../images/card/Silver01.jpeg";
+import { Icon } from "semantic-ui-react";
 import "./Product.css";
 
 const cardData = [
@@ -34,31 +35,58 @@ const cardData = [
         "For a limited time, earn a $150 bonus after making $500 in eligible purchases within the first 90 days of account opening. Enjoy a 0% intro APR9 on balance transfers for the first 12 billing cycles. After that the APR is variable, currently 13.99%–23.99%.",
     },
   ];
-  
-const Product=()=> {
-    return (
-        <div>
-            <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={Gold1} />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-  </Card.Body>
-  <ListGroup className="list-group-flush">
-    <ListGroupItem>Cras justo odio</ListGroupItem>
-    <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-    <ListGroupItem>Vestibulum at eros</ListGroupItem>
-  </ListGroup>
-  <Card.Body>
-    <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
-  </Card.Body>
-</Card>
-        </div>
-    )
-}
 
-export default Product;
+  const Product = () => {
+    return (
+      <Container className="product-container">
+        <Row>
+          <p className="h2 fw-bold text-center my-xs-1 my-md-1">Anatolia Cards</p>
+        </Row>
+        <Row className="d-flex justify-content-center ">
+          {cardData.map((item) => {
+            const { cards, image, title, description } = item;
+            return (
+              <Col
+                xs={12}
+                md={6}
+                lg={4}
+                className="d-flex justify-content-center  rounded p-3"
+              >
+                <Card
+                  className="card-stil"
+                  style={{ width: "22rem", marginBottom: "10px" }}
+                >
+                  <Card.Title className="fw-bolder p-3">{title}</Card.Title>
+                  <Card.Img src={image} className="product-image" />
+                  <ListGroup className="list-group-flush">
+                    {cards.map((card) => {
+                      return (
+                        <ListGroupItem className="py-1 card-properies-list">
+                          <Card.Link href="#" className="product-card-link">
+                            <p className="table-parent ">
+                              <h5 className="table-child">{card}</h5>
+                              <Icon
+                                name="angle right"
+                                className="icon-card d-flex align-items-center"
+                              ></Icon>
+                            </p>
+                          </Card.Link>
+                        </ListGroupItem>
+                      );
+                    })}
+                  </ListGroup>
+                  <Card.Body>
+                    <Card.Text>{description}</Card.Text>
+                    <Card.Link href="#" className="product-details">
+                      Detail
+                    </Card.Link>
+                  </Card.Body>
+                </Card>
+              </Col>
+            );
+          })}
+        </Row>
+      </Container>
+    );
+  };
+  export default Product;
