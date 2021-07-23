@@ -1,0 +1,10 @@
+Formik: Form'lar icin yazilmis bir React kutuphanesidir.(laybreri)
+It's a React library(laybreri) for forms.
+Installation:
+You can install Formik with NPM, Yarn, or a good ol' <script> via unpkg.com.
+NPM
+ npm install formik --save
+or
+ yarn add formik
+Simply add the following <script> tag to the bottom of your HTML file:
+ <script src="https://unpkg.com/formik/dist/formik.umd.production.min.js"></script>
