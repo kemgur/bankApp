@@ -1,0 +1,11 @@
+Formlarda hazir sekillndirme yapar.Ornekteki gibi.
+
+
+<Row className="justify-content-center">
+            <Col sm={12} md={6} className="text-center p-3">
+              <Field
+                component={TextField}
+                name="username"
+                type="text"
+                label="User Name"
+              />

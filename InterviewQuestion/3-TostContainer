@@ -1,0 +1,6 @@
+1-Login yapildiginda "basarili oldu" yazisinin cikmasini saglar.
+ilgili sayfaya eklenir.
+import "react-toastify/dist/ReactToastify.css";
+
+2-Return'un en altina eklenir.
+ <ToastContainer />
